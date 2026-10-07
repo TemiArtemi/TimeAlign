@@ -1,0 +1,350 @@
+/*
+  TimeAlign - Styles
+*/
+
+:root {
+  --bg: #0a0a0f;
+  --bg-subtle: #12121a;
+  --fg: #e8e8f0;
+  --muted: #6b6b80;
+  --accent: #c8ff00;
+  --card: #1a1a24;
+  --border: #2a2a3a;
+  --correct: #4ade80;
+  --incorrect: #f87171;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.font-display { font-family: 'Playfair Display', serif; }
+
+/* Background pattern */
+.bg-pattern {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 100%;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Game area */
+.game-area {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Attempts */
+.attempts {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.attempt-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.attempt-indicator.correct {
+  background: var(--correct);
+  color: #000;
+}
+
+.attempt-indicator.incorrect {
+  background: var(--incorrect);
+  color: #fff;
+}
+
+/* Events list - vertical stack */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Event card - horizontal row */
+.event-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.15s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  outline: none;
+}
+
+.event-card:hover:not(.correct) {
+  border-color: var(--muted);
+}
+
+.event-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(200,255,0,0.2);
+}
+
+.event-card.dragging {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  z-index: 100;
+  cursor: grabbing;
+  opacity: 0.9;
+}
+
+.event-card.correct {
+  border-color: var(--correct);
+  background: rgba(74, 222, 128, 0.08);
+  cursor: default;
+}
+
+.event-card.incorrect {
+  border-color: var(--incorrect);
+  background: rgba(248, 113, 113, 0.06);
+}
+
+/* Drag handle icon */
+.event-handle {
+  color: var(--muted);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.event-card.correct .event-handle {
+  color: var(--correct);
+}
+
+.event-number {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  width: 50px;
+  text-align: center;
+}
+
+.event-name {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  flex: 1;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0a0a0f;
+}
+
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--muted);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal.active { display: flex; }
+
+.modal-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.modal-content p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+/* Facts list */
+#facts-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#facts-list li {
+  background: var(--bg-subtle);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+#facts-list h3 {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Share */
+.share-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--accent);
+  color: #0a0a0f;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.share-btn:hover { filter: brightness(1.1); }
+
+#share-text {
+  display: none;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--fg);
+  font-family: monospace;
+  font-size: 0.8rem;
+  resize: none;
+  min-height: 100px;
+}
+
+#share-text.visible { display: block; }
+
+/* Close button spacing */
+#close-modal {
+  margin-top: 1rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-subtle); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

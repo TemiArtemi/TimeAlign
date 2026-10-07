@@ -1,0 +1,17 @@
+{
+  "name": "timealign",
+  "version": "1.0.0",
+  "description": "Ordena la historia - juego diario de cronología histórica",
+  "scripts": {
+    "dev": "npx serve public",
+    "dev:src": "npx serve src",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "game",
+    "daily-puzzle",
+    "timeline",
+    "wordle"
+  ],
+  "license": "MIT"
+}

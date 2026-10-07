@@ -1,0 +1,68 @@
+{
+  "puzzles": [
+    {
+      "events": [
+        {"id": 1, "name": "Fundación de Nintendo", "year": 1889, "fact": "Nintendo empezó vendiendo cartas Hanafuda en Kioto."},
+        {"id": 2, "name": "Primera Olimpiada Moderna", "year": 1896, "fact": "Se celebraron en Atenas con atletas de 14 países."},
+        {"id": 3, "name": "Invención del radio", "year": 1898, "fact": "Marie Curie descubrió el radio trabajando en un cobertizo."},
+        {"id": 4, "name": "Primer vuelo de los Wright", "year": 1903, "fact": "12 segundos en el aire en Kitty Hawk, Carolina del Norte."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Imprenta de Gutenberg", "year": 1450, "fact": "La imprenta de tipos móviles revolucionó la difusión del conocimiento."},
+        {"id": 2, "name": "Caída de Constantinopla", "year": 1453, "fact": "El Imperio otomano conquistó la ciudad marcando el fin de la Edad Media."},
+        {"id": 3, "name": "Descubrimiento de América", "year": 1492, "fact": "Cristóbal Colón llegó al continente americano buscando una ruta a Asia."},
+        {"id": 4, "name": "Vuelo de Leonardo da Vinci", "year": 1500, "fact": "Leonardo diseñó máquinas voladoras 400 años antes del primer vuelo."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Declaración de Independencia", "year": 1776, "fact": "13 colonias británicas declararon su independencia en Filadelfia."},
+        {"id": 2, "name": "Revolución Francesa", "year": 1789, "fact": "La toma de la Bastilla marcó el fin del Antiguo Régimen."},
+        {"id": 3, "name": "Invención de la máquina de vapor", "year": 1769, "fact": "James Watt mejoró la máquina de vapor desencadenando la Revolución Industrial."},
+        {"id": 4, "name": "Primer viaje en globo aerostático", "year": 1783, "fact": "Los hermanos Montgolfier realizaron el primer vuel humano en globo."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Primera Guerra Mundial", "year": 1914, "fact": "El asesinato del archiduque Franz Ferdinand desató la guerra."},
+        {"id": 2, "name": "Descubrimiento de la penicilina", "year": 1928, "fact": "Alexander Fleming descubrió la penicilina por accidente."},
+        {"id": 3, "name": "Crack de Wall Street", "year": 1929, "fact": "El colapso bursátil desencadenó la Gran Depresión."},
+        {"id": 4, "name": "Primera transmisión de TV", "year": 1927, "fact": "Philo Farnsworth realizó la primera transmisión de televisión eléctrica."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Lanzamiento del Sputnik", "year": 1957, "fact": "La URSS lanzó el primer satélite artificial al espacio."},
+        {"id": 2, "name": "Moon landing", "year": 1969, "fact": "Apollo 11 llevó a los humanos por primera vez a la Luna."},
+        {"id": 3, "name": "Caída del Muro de Berlín", "year": 1989, "fact": "El muro cayó marcando el fin de la Guerra Fría."},
+        {"id": 4, "name": "Invención del microprocesador", "year": 1971, "fact": "Intel creó el primer microprocesador comercial, el Intel 4004."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Primer vuelo de los Wright", "year": 1903, "fact": "12 segundos en el aire en Kitty Hawk, Carolina del Norte."},
+        {"id": 2, "name": "Hundimiento del Titanic", "year": 1912, "fact": "El transatlántico más grande de su época se hundió en su viaje inaugural."},
+        {"id": 3, "name": "Primera Guerra Mundial", "year": 1914, "fact": "El asesinato del archiduque Franz Ferdinand desató la guerra."},
+        {"id": 4, "name": "Invención del panecillo", "year": 1910, "fact": "El panecillo de Wilbur scoville... no, fue la escala de picante."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Año 1000 - Vikingos llegan a América", "year": 1000, "fact": "Leif Erikson llegó a América 500 años antes que Colón."},
+        {"id": 2, "name": "Construcción de la Gran Muralla China", "year": 1000, "fact": "La versión actual se construyó durante la dinastía Ming."},
+        {"id": 3, "name": "Fundación de la Universidad de Bolonia", "year": 1088, "fact": "Es la universidad más antigua de Europa en funcionamiento."},
+        {"id": 4, "name": "Primera Cruzada", "year": 1096, "fact": "Los europeos partieron para reconquistar Tierra Santa."}
+      ]
+    },
+    {
+      "events": [
+        {"id": 1, "name": "Lanzamiento de Windows 95", "year": 1995, "fact": "Incluyó el primer botón 'Start' en la barra de tareas."},
+        {"id": 2, "name": "Primera web pública", "year": 1991, "fact": "Tim Berners-Lee publicó el primer sitio web del mundo."},
+        {"id": 3, "name": "Descubrimiento del Titanic", "year": 1985, "fact": "Robert Ballard encontró los restos del Titanic a 3,800m de profundidad."},
+        {"id": 4, "name": "Caída del Muro de Berlín", "year": 1989, "fact": "La gente subió al muro cantando canciones de unidad."}
+      ]
+    }
+  ]
+}
